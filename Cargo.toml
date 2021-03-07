@@ -1,0 +1,16 @@
+[package]
+name = "quickjs_rs"
+version = "0.1.0"
+edition = "2018"
+links = "libquickjs"
+build = "build.rs"
+
+[dependencies]
+libc = "0.2"
+
+[target.x86_64-fortanix-unknown-sgx.dependencies]
+rs-libc = "0.2.1"
+
+[build-dependencies]
+cc = "1.0"
+bindgen = "0.51.1"
