@@ -474,3 +474,9 @@ done:
 
     return value * sign;
 }
+
+int putc(int c, void* stream) {
+    if (stream == stdout) {
+        putchar(c);
+    }
+}
